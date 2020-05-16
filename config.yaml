@@ -1,0 +1,31 @@
+# Enter sample details
+samples:
+  - M0_Ctl_1_CRRA190003390-1a_HV373DSXX_L1
+
+
+end_type: pe
+
+map_method: hisat2 
+
+trim_quality: 20
+
+trim_cores: 4
+
+trim_params: --stringency 2 --gzip --length 25 --max_n 4 --trim-n
+
+bowtie_idx: /scratch/ukarvind_root/ukarvind/shared_data/joshi_data/Homo_sapiens/UCSC/hg19/Sequence/Bowtie2Index/genome
+
+bowtie_params: -p 24 -q --time 
+
+hisat_idx: /scratch/ukarvind_root/ukarvind/anashank/hisat2_index/hg19
+
+hisat_params: -p 24 -q --time
+
+kallisto_idx: /scratch/ukarvind_root/ukarvind/anashank/kallisto_index/hg19_cdna_kallisto_index.idx
+
+kallisto_params: -b 20 -t 8
+
+#Parameters for samtools sort
+sort_params: -m 2G -@ 8
+
+
